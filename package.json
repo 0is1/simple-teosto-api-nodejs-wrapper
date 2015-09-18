@@ -1,0 +1,12 @@
+{
+  "name": "simple-teosto-nodejs-api-wrapper",
+  "version": "0.0.1",
+  "description": "Teosto HackDay 2015",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Janne Saarela",
+  "dependencies": {
+    "request": "^2.62.0"
+  }
+}
