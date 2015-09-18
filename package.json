@@ -1,5 +1,5 @@
 {
-  "name": "simple-teosto-nodejs-api-wrapper",
+  "name": "simple-teosto-api-nodejs-wrapper",
   "version": "0.0.1",
   "description": "Teosto HackDay 2015",
   "scripts": {
