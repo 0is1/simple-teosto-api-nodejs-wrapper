@@ -194,7 +194,7 @@ module.exports = {
   },
 
   getPlaceVenues: function(id, page, limit, cb) {
-    createGetRequest('place?id=' + id + 'method=venues&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
+    createGetRequest('place?id=' + id + '&method=venues&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
         cb(error, response, false);
       } else {
@@ -245,7 +245,7 @@ module.exports = {
   },
 
   getVenueEvents: function(id, page, limit, cb) {
-    createGetRequest('venue?id=' + id + 'method=events&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
+    createGetRequest('venue?id=' + id + '&method=events&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
         cb(error, response, false);
       } else {
@@ -286,7 +286,7 @@ module.exports = {
   },
 
   getEventShows: function(id, page, limit, cb) {
-    createGetRequest('event?id=' + id + 'method=shows&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
+    createGetRequest('event?id=' + id + '&method=shows&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
         cb(error, response, false);
       } else {
@@ -317,7 +317,7 @@ module.exports = {
   },
 
   getShowWorks: function(id, page, limit, cb) {
-    createGetRequest('show?id=' + id + 'method=works&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
+    createGetRequest('show?id=' + id + '&method=works&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
         cb(error, response, false);
       } else {
@@ -358,7 +358,7 @@ module.exports = {
   },
 
   getWorkShows: function(id, page, limit, cb) {
-    createGetRequest('work?id=' + id + 'method=shows&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
+    createGetRequest('work?id=' + id + '&method=shows&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
         cb(error, response, false);
       } else {
@@ -409,7 +409,7 @@ module.exports = {
   },
 
   getAuthorWorks: function(id, page, limit, cb) {
-    createGetRequest('author?id=' + id + 'method=works&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
+    createGetRequest('author?id=' + id + '&method=works&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
         cb(error, response, false);
       } else {
