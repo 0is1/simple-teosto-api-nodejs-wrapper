@@ -22,7 +22,7 @@ module.exports = {
   getRoot: function(cb) {
     createGetRequest('', function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -32,7 +32,7 @@ module.exports = {
   getFinlandTopWorks: function(cb) {
     createGetRequest('finland?method=topWorks', function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -43,7 +43,7 @@ module.exports = {
   getRegions: function(cb) {
     createGetRequest('region', function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -53,7 +53,7 @@ module.exports = {
   getRegionByName: function(name, cb) {
     createGetRequest('region?name=' + name, function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -63,7 +63,7 @@ module.exports = {
   getRegionMunicipalities: function(name, page, limit, cb) {
     createGetRequest('region?name=' + name + '&method=municipalities&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -73,7 +73,7 @@ module.exports = {
   getRegionPlaces: function(name, page, limit, cb) {
     createGetRequest('region?name=' + name + '&method=places&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -83,7 +83,7 @@ module.exports = {
   getRegionVenues: function(name, page, limit, cb) {
     createGetRequest('region?name=' + name + '&method=venues&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -93,7 +93,7 @@ module.exports = {
   getRegionEvents: function(name, page, limit, cb) {
     createGetRequest('region?name=' + name + '&method=events&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -103,7 +103,7 @@ module.exports = {
   getRegionTopWorks: function(name, cb) {
     createGetRequest('region?name=' + name + '&method=topWorks', function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -115,7 +115,7 @@ module.exports = {
   getMunicipalities: function(page, limit, cb) {
     createGetRequest('municipality?page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -125,7 +125,7 @@ module.exports = {
   getMunicipalityByName: function(name, cb) {
     createGetRequest('municipality?name=' + name, function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -135,7 +135,7 @@ module.exports = {
   getMunicipalityPlaces: function(name, page, limit, cb) {
     createGetRequest('municipality?name=' + name + '&method=places&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -145,7 +145,7 @@ module.exports = {
   getMunicipalityVenues: function(name, page, limit, cb) {
     createGetRequest('municipality?name=' + name + '&method=venues&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -155,7 +155,7 @@ module.exports = {
   getMunicipalityEvents: function(name, page, limit, cb) {
     createGetRequest('municipality?name=' + name + '&method=events&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -165,7 +165,7 @@ module.exports = {
   getMunicipalityTopWorks: function(name, cb) {
     createGetRequest('municipality?name=' + name + '&method=topWorks', function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -176,7 +176,7 @@ module.exports = {
   getPlaces: function(page, limit, cb) {
     createGetRequest('place?page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -186,7 +186,7 @@ module.exports = {
   getPlaceById: function(id, cb) {
     createGetRequest('place?id=' + id, function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -196,7 +196,7 @@ module.exports = {
   getPlaceVenues: function(id, page, limit, cb) {
     createGetRequest('place?id=' + id + 'method=venues&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -206,7 +206,7 @@ module.exports = {
   getPlaceTopWorks: function(id, cb) {
     createGetRequest('place?id=' + id + '&method=topWorks', function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -217,7 +217,7 @@ module.exports = {
   getVenues: function(page, limit, cb) {
     createGetRequest('venue?page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -227,7 +227,7 @@ module.exports = {
   getVenueById: function(id, cb) {
     createGetRequest('venue?id=' + id, function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -237,7 +237,7 @@ module.exports = {
   getVenueByName: function(name, cb) {
     createGetRequest('venue?name=' + name, function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -247,7 +247,7 @@ module.exports = {
   getVenueEvents: function(id, page, limit, cb) {
     createGetRequest('venue?id=' + id + 'method=events&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -257,7 +257,7 @@ module.exports = {
   getVenueTopWorks: function(id, cb) {
     createGetRequest('venue?id=' + id + '&method=topWorks', function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -268,7 +268,7 @@ module.exports = {
   getEvents: function(page, limit, cb) {
     createGetRequest('event?page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -278,7 +278,7 @@ module.exports = {
   getEventById: function(id, cb) {
     createGetRequest('event?id=' + id, function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -288,7 +288,7 @@ module.exports = {
   getEventShows: function(id, page, limit, cb) {
     createGetRequest('event?id=' + id + 'method=shows&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -299,7 +299,7 @@ module.exports = {
   getShows: function(page, limit, cb) {
     createGetRequest('show?page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -309,7 +309,7 @@ module.exports = {
   getShowById: function(id, cb) {
     createGetRequest('show?id=' + id, function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -319,7 +319,7 @@ module.exports = {
   getShowWorks: function(id, page, limit, cb) {
     createGetRequest('show?id=' + id + 'method=works&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -330,7 +330,7 @@ module.exports = {
   getWorks: function(page, limit, cb) {
     createGetRequest('work?page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -340,7 +340,7 @@ module.exports = {
   getWorkById: function(id, cb) {
     createGetRequest('work?id=' + id, function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -350,7 +350,7 @@ module.exports = {
   getWorkByName: function(name, page, limit, cb) {
     createGetRequest('work?title=' + name + '&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -360,7 +360,7 @@ module.exports = {
   getWorkShows: function(id, page, limit, cb) {
     createGetRequest('work?id=' + id + 'method=shows&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -370,7 +370,7 @@ module.exports = {
   getWorkTopMunicipalities: function(id, cb) {
     createGetRequest('work?id=' + id + '&method=topMunicipalities', function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -380,7 +380,7 @@ module.exports = {
   getWorkTopVenues: function(id, cb) {
     createGetRequest('work?id=' + id + '&method=topVenues', function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -391,7 +391,7 @@ module.exports = {
   getAuthors: function(page, limit, cb) {
     createGetRequest('author?page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -401,7 +401,7 @@ module.exports = {
   getAuthorById: function(id, cb) {
     createGetRequest('author?id=' + id, function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -411,7 +411,7 @@ module.exports = {
   getAuthorWorks: function(id, page, limit, cb) {
     createGetRequest('author?id=' + id + 'method=works&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -421,7 +421,7 @@ module.exports = {
   getAuthorTopWorks: function(id, cb) {
     createGetRequest('author?id=' + id + '&method=topWorks', function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -431,7 +431,7 @@ module.exports = {
   getAuthorTopVenues: function(id, cb) {
     createGetRequest('author?id=' + id + '&method=topVenues', function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -442,7 +442,7 @@ module.exports = {
   getRoles: function(page, limit, cb) {
     createGetRequest('role?page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -452,7 +452,7 @@ module.exports = {
   getRoleInfoByTitle: function(title, cb) {
     createGetRequest('role?titleAbbr=' + title, function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -462,7 +462,7 @@ module.exports = {
   getRoleTopAuthorsByTitle: function(title, cb) {
     createGetRequest('role?titleAbbr=' + title + '&method=topAuthors', function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -473,7 +473,7 @@ module.exports = {
   getDates: function(page, limit, cb) {
     createGetRequest('date?page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -483,7 +483,7 @@ module.exports = {
   getDatesByDatetime: function(datetime, cb) {
     createGetRequest('date?date=' + datetime, function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -493,7 +493,7 @@ module.exports = {
   getDatesByStartDate: function(startDate, page, limit, cb) {
     createGetRequest('date?startDate=' + startDate + '&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -503,7 +503,7 @@ module.exports = {
   getDatesByMonth: function(month, page, limit, cb) {
     createGetRequest('date?month=' + month + '&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
@@ -513,7 +513,7 @@ module.exports = {
   getDatesByWeekdayNumber: function(weekdayNumber, page, limit, cb) {
     createGetRequest('date?weekday=' + weekdayNumber + '&page=' + getPage(page) + '&limit=' + getLimit(limit), function(error, response, body) {
       if (error) {
-        cb(error, false, false);
+        cb(error, response, false);
       } else {
         cb(false, response, body);
       }
